@@ -18,10 +18,8 @@
   }
   
   body {
-    margin: 0;
     font-family: 'Sen', sans-serif;
     font-size: 1rem;
-    line-height: 1.5;
     color: var(--black);
     text-align: left;
     background-color: var(--light);
@@ -39,6 +37,10 @@
   /* Utility Classes start */
   .container {
     max-width: 1200px;
+  }
+
+  .row {
+    margin: 0;
   }
 
   .active {
@@ -105,14 +107,14 @@
   }
 /* Navbar */
 
-/* Under navbar */
+/* Under navbar start */
 #list ul {
   display: flex;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 #list ul li a{
-  padding: 5px 20px;
+  padding: 4px 18px;
 }
 
 #list a {
@@ -122,20 +124,92 @@
 #list .activeTag{
   color: var(--light);
 }
-/* Under navbar */
+
+#list .listItems {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#list #searchBar {
+  padding: 5px;
+  border: none;
+  width: 200px;
+} 
+
+#list .searchBar {
+  color: var(--gray);
+}
+
+/* Under navbar end */
 
 /* Header start */
 #header {
-  height: 25rem;
+  height: 30rem;
   background-color: var(--gray);
 }
 
 #header div {
   height: 100%;
+  padding: 0;
 }
 
 #header .halfHeight {
   background-color: olive;
   height: 50%;
+}
+
+#header img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.card-items{
+  position: relative;
+}
+.card-items::before {
+  content:'';
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.card-items .title {
+  font-size: 2.4rem;
+  color: var(--light);
+  position: absolute;
+  bottom: 50px;
+  left: 30%;
+  max-width: 65%;
+}
+
+.card-items .dateInfo {
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
+  font-size: 1rem;
+  font-weight: 200;
+  color: var(--light);
+}
+
+.card-items .tag {
+  position: absolute;
+  top: 30px;
+  left: 30%;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  width: 150px;
+  max-height: 30px;
+  background-color: var(--red);
+  clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+}
+.card-items .tag h5 {
+  padding-left: 10px;
+  font-weight: 200;
 }
 /* Header end */
